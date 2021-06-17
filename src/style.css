@@ -1,0 +1,197 @@
+/* Primary Colour Scheme */
+
+:root {
+    --blue1: rgb(47, 102, 144);
+    --blue2: rgb(58, 124, 165);
+    --white: rgb(255, 255, 255);
+    --blue_dark: rgb(22, 66, 91);
+    --blue_light: rgb(134, 190, 243);
+}
+
+/* Small Device CSS - 600px and down */
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#content {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--white);
+    margin: 0;
+}
+
+.parallax {
+    background: url("../src/images/bg-small.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 90vh;
+}
+
+#header {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    z-index: 9999;
+}
+
+#header h1 {
+    color: var(--white);
+    text-shadow: 0 0 10px var(--blue_dark);
+    margin-left: 5%;
+}
+
+#header-links {
+    width: 30vh;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+.svg-link {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.svg-link:hover {
+    transform: scale(110%);
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+}
+
+.sticky-header + #main {
+    padding-top: 100px;
+}
+
+#main {
+    padding: 16px;
+    text-shadow: 0 0 10px var(--blue_dark);
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 300px;
+}
+
+#nav-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.nav-button {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 12px;
+    background-color: var(--blue_light);
+    color: var(--white);
+    text-shadow: 0 0 10px var(--blue_dark);
+    font-size: large;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 0 10px var(--blue_dark);
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    transform: scale(110%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-info {
+    background-color: rgb(255, 255, 255, 0.2);
+    width: 80%;
+    height: 30vh;
+    margin-top: 5vh;   
+}
+
+.article-header {
+    color: var(--white);
+    text-shadow: 0 0 10px var(--blue_dark);
+    background-color: var(--blue_light);
+    align-items: center;
+    margin: 0;
+}
+
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+    animation-duration: 0.6s;
+}
+
+.already-visible {
+    transform: translateY(0);
+    animation: none;
+}
+
+@keyframes come-in {
+    to { transform: translateY(0); }
+}
+
+/* Medium Device CSS - 600px and up */
+
+@media (min-width: 600px) {
+
+    .parallax {
+        background: url("../src/images/bg-medium.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+}
+
+/* Large Device CSS - 1025px and up */
+
+@media (min-width: 1025px) {
+
+    .parallax {
+        background: url("../src/images/bg-large.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+}
