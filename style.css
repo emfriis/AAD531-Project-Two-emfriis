@@ -10,6 +10,7 @@
 
 html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -25,12 +26,12 @@ body {
 }
 
 .parallax {
-    background: url("../src/images/bg-small.jpg") no-repeat center center fixed;
+    background: url("../images/bg-small.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
 }
 
 #header {
@@ -136,19 +137,19 @@ body {
 .sidebar-info {
     background-color: rgb(255, 255, 255, 0.2);
     width: 80%;
-    height: 30vh;
+    height: 40vh;
     margin-top: 5vh; 
     color: var(--white);
     text-shadow: 0 0 15px var(--blue_dark);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
+    flex-direction: column;
+    justify-content: center; 
     align-items: center;
+    font-size: small;
 }
 
 .sidebar-text {
-    width: 50%;
-    padding: 5%;
+    width: 80%;
 }
 
 .article-header {
@@ -157,6 +158,16 @@ body {
     background-color: var(--blue_light);
     align-items: center;
     margin: 0;
+}
+
+.sidebar-icons {
+    width: 50vw;
+}
+
+.icon {
+    fill: white;
+    height: 8vw;
+    width: 8vw;
 }
 
 .come-in {
@@ -177,16 +188,42 @@ body {
     to { transform: translateY(0); }
 }
 
+/* CSS specific to iOS devices */ 
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+
+    .parallax {
+        background: url("../images/bg-small.jpg") no-repeat center center;
+    }
+
+} 
+
 /* Medium Device CSS - 600px and up */
 
 @media (min-width: 600px) {
 
     .parallax {
-        background: url("../src/images/bg-medium.jpg") no-repeat center center fixed;
+        background: url("../images/bg-medium.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    }
+    
+    .sidebar-info {
+        flex-direction: row;
+        font-size: medium;
+        justify-content: space-between; 
+    }
+    
+    .sidebar-text {
+        width: 35%;
+        padding: 5%
+    }
+    
+    .sidebar {
+        height: 30vh; 
     }
 
 }
@@ -196,7 +233,7 @@ body {
 @media (min-width: 1025px) {
 
     .parallax {
-        background: url("../src/images/bg-large.jpg") no-repeat center center fixed;
+        background: url("../images/bg-large.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -204,7 +241,18 @@ body {
     }
 
     .sidebar-info {
+        flex-direction: row;
         font-size: larger;
+        justify-content: space-between; 
+    }
+    
+    .sidebar-text {
+        width: 35%;
+        padding: 5%;
+    }
+    
+    .sidebar {
+        height: 30vh; 
     }
 
 }
