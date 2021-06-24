@@ -1,8 +1,6 @@
 /* Primary Colour Scheme */
 
 :root {
-    --blue1: rgb(47, 102, 144);
-    --blue2: rgb(58, 124, 165);
     --white: rgb(255, 255, 255);
     --blue_dark: rgb(22, 66, 91);
     --blue_light: rgb(134, 190, 243);
@@ -139,7 +137,18 @@ body {
     background-color: rgb(255, 255, 255, 0.2);
     width: 80%;
     height: 30vh;
-    margin-top: 5vh;   
+    margin-top: 5vh; 
+    color: var(--white);
+    text-shadow: 0 0 15px var(--blue_dark);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.sidebar-text {
+    width: 50%;
+    padding: 5%;
 }
 
 .article-header {
@@ -192,6 +201,10 @@ body {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    }
+
+    .sidebar-info {
+        font-size: larger;
     }
 
 }
